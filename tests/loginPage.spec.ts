@@ -15,4 +15,11 @@ describe("Login Page Tests", () => {
       testData.loginPage.password
     );
   });
+  test("login", async ({ page }) => {
+    await loginpage.login_page(
+      page,
+      testData.loginPage.username,
+      testData.loginPage.password
+    );
+  });
 });
