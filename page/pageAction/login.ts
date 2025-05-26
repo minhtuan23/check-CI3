@@ -7,4 +7,5 @@ export async function login_page(page: Page, username: string, password: string)
     await page.fill(loginPage.usernameInput, username);
     await page.fill(loginPage.passwordInput, password);
     await page.click(loginPage.loginButton);
+    // check
 }
