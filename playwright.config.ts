@@ -3,7 +3,7 @@ import { isHeadless, WORKERS, TEST_RETRIES, TRACE, REPORTER, VIDEO } from './con
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
@@ -21,7 +21,7 @@ export default defineConfig({
       use: {
         browserName: 'chromium',
         channel: 'chrome',
-        headless: false,
+        headless: true,
         viewport: { width: 1920, height: 1080 },
         ignoreHTTPSErrors: true,
         screenshot: 'only-on-failure',
