@@ -1,10 +1,7 @@
 import { ReporterDescription } from '@playwright/test';
 
 const { TEST_ENV, TIMEOUT, HEADLESS, TEST_CI } = process.env;
-
-export const isSIT = TEST_ENV === 'SIT';
-export const isUAT = TEST_ENV === 'UAT';
-export const isProd = TEST_ENV === 'PROD';
+export const TEST_ENVIRONMENT = TEST_ENV || 'local';
 export const TEST_TIMEOUT = typeof TIMEOUT === 'string' ? parseInt(TIMEOUT, 10) : 60000;
 export const isHeadless = HEADLESS === 'true';
 export const isCI = TEST_CI === 'true';

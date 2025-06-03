@@ -21,7 +21,7 @@ export default defineConfig({
       use: {
         browserName: 'chromium',
         channel: 'chrome',
-        headless: true,
+        headless: false,
         viewport: { width: 1920, height: 1080 },
         ignoreHTTPSErrors: true,
         screenshot: 'only-on-failure',
